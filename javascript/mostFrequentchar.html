@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let str="3554";
+        var getMax = function (str) {
+        var max = 0,
+            maxChar = '';
+        str.split('').forEach(function(char){
+            if(str.split(char).length > max) {
+                max = str.split(char).length;
+                maxChar = char;
+            }
+        });
+        return maxChar;
+        
+        };
+
+     console.log("MAXCHAR",getMax(str))
+
+    </script>
+</body>
+</html>
