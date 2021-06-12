@@ -9,15 +9,22 @@
 <body>
     
     <script>
-        let str="3554";
+        let str="3422  234555 2 2 3  1 4 6 9 5 5 5 5 5 5 5  ";
         var getMax = function (str) {
         var max = 0,
             maxChar = '';
+
+            // console.log("ARR",str.split(''))
         str.split('').forEach(function(char){
-            if(str.split(char).length > max) {
+            console.log(char)
+            if(char!==" ")
+            {
+            if(str.split(char).length > max ) {
+                   
                 max = str.split(char).length;
                 maxChar = char;
             }
+        }
         });
         return maxChar;
         

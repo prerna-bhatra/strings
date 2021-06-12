@@ -1,0 +1,8 @@
+Kth largest element
+
+
+Step 1-: create a max  heap from a[0] to a[k-1] 
+step2-: then from a[k] to a[end] compare the root element 
+         if element is less than root element then replace it with root element can agaian hepify to create max heap
+
+step3 -: reapet it to thel end of arr and the final root element is  kth smallest element 
