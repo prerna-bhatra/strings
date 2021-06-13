@@ -1,16 +1,13 @@
-// C++ program for building Heap from Array
-
 #include <iostream>
-
 using namespace std;
 
-// To heapify a subtree rooted with node i which is
-// an index in arr[]. N is size of heap
 void heapify(int arr[], int n, int i)
 {
 	int largest = i; // Initialize largest as root
 	int l = 2 * i + 1; // left = 2*i + 1
 	int r = 2 * i + 2; // right = 2*i + 2
+	
+	cout<<"LG"<<largest<<"\n";
 
 	// If left child is larger than root
 	if (l < n && arr[l] > arr[largest])
@@ -32,8 +29,12 @@ void heapify(int arr[], int n, int i)
 // Function to build a Max-Heap from the given array
 void buildHeap(int arr[], int n)
 {
+	
 	// Index of last non-leaf node
 	int startIdx = (n / 2) - 1;
+	
+	
+	cout<<"ST"<<startIdx;
 
 	// Perform reverse level order traversal
 	// from last non-leaf node and heapify
@@ -66,13 +67,20 @@ int main()
 	// 4	 6 13 10
 	// / \ / \
 	// 9 8 15 17
-	int arr[] = { 1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17 };
+	int arr[] = { 1, 3, 5, 4, 6, 2 };
 
 	int n = sizeof(arr) / sizeof(arr[0]);
 
 	buildHeap(arr, n);
 
 	printHeap(arr, n);
+
+//   for(int i=0;i<n;i++)
+//	{
+//	
+//		cout<<arr[i]<<" ";
+//	}
+	
 	// Final Heap:
 	// 17
 	//		 /	 \
